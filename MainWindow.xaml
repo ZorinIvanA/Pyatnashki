@@ -31,7 +31,7 @@
             </ItemsControl.ItemTemplate>
         </ItemsControl>
         <Grid Grid.Row="1">
-            <Button Command="{Binding RestartCommand}">Рестарт</Button>
+            <Button Command="{Binding RestartCommand}">Restart</Button>
         </Grid>
     </Grid>
 </Window>

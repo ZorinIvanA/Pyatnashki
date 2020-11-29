@@ -24,7 +24,7 @@ namespace Pyatnashki
             RestartCommand = new RelayCommand(Restart);
             RestartCommand.Execute(null);
             MoveCommand = new RelayCommand(Move);
-            Title = "Игра!";
+            Title = "Play!";
         }
 
         public void Restart(object parameter)
@@ -55,7 +55,7 @@ namespace Pyatnashki
             if (Buttons == null || Buttons.Count == 0)
                 return false;
 
-            int sum = 4;//Номер ряда с пустой клеткой, начиная с 1
+            int sum = 4;//Row number with empty button, starts from 1
             for (int i = 0; i < BUTTONS_COUNT; i++)
             {
                 sum += Buttons.Count(x => x.Position > i && x.Value < Buttons[i].Value);
@@ -92,7 +92,7 @@ namespace Pyatnashki
         {
             IsNotWin = !Buttons.All(x => x.Value == null || x.Value == x.Position + 1);
             if (!IsNotWin)
-                Title = "ПОБЕДА! Нажмите РЕСТАРТ";
+                Title = "Victory! Press restart!";
 
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Title)));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(IsNotWin)));
