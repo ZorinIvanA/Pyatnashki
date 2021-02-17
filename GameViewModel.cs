@@ -8,7 +8,7 @@ using System.Windows.Input;
 namespace Pyatnashki
 {
     /// <summary>
-    /// Это класс
+    /// Это viewmodel
     /// </summary>
     public class GameViewModel : INotifyPropertyChanged
     {
