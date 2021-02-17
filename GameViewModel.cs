@@ -7,6 +7,9 @@ using System.Windows.Input;
 
 namespace Pyatnashki
 {
+    /// <summary>
+    /// Это viewmodel
+    /// </summary>
     public class GameViewModel : INotifyPropertyChanged
     {
         public ObservableCollection<ButtonViewModel> Buttons { get; set; }
